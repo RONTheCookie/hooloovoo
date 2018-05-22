@@ -19,11 +19,10 @@ exports.version = '1.0.7';
 
 // Init rpio
 rpio.init({
-    mapping: 'gpio'
-}); /* Use the GPIOxx numbering */
-rpio.init({
+    mapping: 'gpio',
     gpiomem: false
-}); /* Use /dev/mem for i²c/PWM/SPI */
+}); /* Use the GPIOxx numbering */
+rpio.open(5, rpio.OUTPUT);
 
 var setup_complete = false;
 var debug = false;
@@ -49,6 +48,7 @@ hooloovoo.prototype = {
         // setup rpio SPI
         rpio.spiBegin();
         rpio.spiSetClockDivider(clock_divider);
+        rpio.write(5, rpio.HIGH);
         setup_complete = !setup_complete;
         
     },
