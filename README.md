@@ -1,5 +1,11 @@
 Hooloovoo
 ==========
+
+### Warning
+Before using this with your Respeaker, you might want to follow [this guide](https://github.com/SeeedDocument/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/blob/master/ReSpeaker-4-Mic-Array-for-Raspberry-Pi.md).
+
+
+
 A superintelligent shade of the color blue.
 
 This is a **node.js** library to control a **APA102** RGB LED strip via **SPI** with your **Raspberry Pi**.
